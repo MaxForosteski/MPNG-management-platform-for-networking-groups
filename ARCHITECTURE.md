@@ -25,7 +25,7 @@ graph TD
         B1["Intent Controller<br/>(/api/intents)"]
         B2["Invitation Controller<br/>(/api/invitations)"]
         B3["Member Controller<br/>(/api/members)"]
-        B4["ORM / Database Layer<br/>(Prisma, Drizzle, etc.)"]
+        B4["ORM / Database Layer<br/>(Prisma)"]
     end
 
     %% === Database ===
