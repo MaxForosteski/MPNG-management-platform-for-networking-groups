@@ -31,7 +31,7 @@ export default function Intention() {
                 reset();
             } else {
                 const err = await res.json();
-                setToast({ message: err.message || "Erro ao enviar intenção.", type: "error" });
+                setToast({ message: err.message || "Erro ao salvar intenção.", type: "error" });
             }
         } catch (error) {
             setToast({ message: "Erro de conexão com o servidor.", type: "error" });
