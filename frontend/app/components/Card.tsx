@@ -15,14 +15,14 @@ export default function Card({ Title, PagePath }: CardProps) {
         <>
             {
                 loading ? (
-                    <div className="p-10 rounded-lg bg-neutral-200">
+                    <div className="p-10 rounded-lg bg-blue-600 text-white font-semibold">
                         <div className="animate-spin">
                             <AiOutlineLoading3Quarters />
                         </div>
                     </div>
                 ) : (
                     <Link onClick={() => { setLoading(true) }} href={PagePath ? PagePath : '/'}>
-                        <div className="p-10 rounded-lg bg-neutral-200">
+                        <div className="p-10 rounded-lg bg-blue-600 text-white font-semibold">
                             <h1>{Title}</h1>
                         </div>
                     </Link>

@@ -10,7 +10,8 @@
     "dev:frontend": "cd frontend && npm run dev",
     "dev:backend": "cd backend && npm run start:dev",
     "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
-    "install": "cd frontend && npm install && cd backend && npm install"
+    "install": "cd frontend && npm install && cd backend && npm install",
+    "migrations": "cd backend && npx prisma migrate dev"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"

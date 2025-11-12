@@ -56,18 +56,36 @@ export default function Intention() {
                 </div>
             )}
 
+            <div className="bg-neutral-200 text-black top-0 w-[100vw] p-6 flex justify-end mb-5"></div>
+
+            <h1 className="text-3xl m-10 text-center">
+                Formulário de intenção de participação
+            </h1>
+
             <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-3 max-w-md mx-auto">
-                <input {...register("name")} placeholder="Nome" className="border p-2 rounded" />
-                {errors.name && <p className="text-red-500 text-sm">{errors.name.message}</p>}
+                <div className="flex flex-col gap-1">
+                    <label htmlFor="name">Nome</label>
+                    <input {...register("name")} placeholder="Nome" className="border p-2 rounded" />
+                    {errors.name && <p className="text-red-500 text-sm">{errors.name.message}</p>}
+                </div>
 
-                <input {...register("email")} placeholder="Email" className="border p-2 rounded" />
-                {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
+                <div className="flex flex-col gap-1">
+                    <label htmlFor="email">Email</label>
+                    <input {...register("email")} placeholder="Email" className="border p-2 rounded" />
+                    {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
+                </div>
 
-                <input {...register("phone")} placeholder="Telefone" className="border p-2 rounded" />
-                {errors.phone && <p className="text-red-500 text-sm">{errors.phone.message}</p>}
+                <div className="flex flex-col gap-1">
+                    <label htmlFor="phone">Telefone</label>
+                    <input {...register("phone")} placeholder="Telefone" className="border p-2 rounded" />
+                    {errors.phone && <p className="text-red-500 text-sm">{errors.phone.message}</p>}
+                </div>
 
-                <textarea {...register("message")} placeholder="Mensagem" className="border p-2 rounded h-24" />
-                {errors.message && <p className="text-red-500 text-sm">{errors.message.message}</p>}
+                <div className="flex flex-col gap-1">
+                    <label htmlFor="message">Mensagem</label>
+                    <textarea {...register("message")} placeholder="Mensagem" className="border p-2 rounded h-24" />
+                    {errors.message && <p className="text-red-500 text-sm">{errors.message.message}</p>}
+                </div>
 
                 <button
                     type="submit"
