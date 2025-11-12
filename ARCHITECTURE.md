@@ -480,19 +480,19 @@ Integração com e-mails transacionais (SendGrid, SES).
 
 #### 1. Configurar variáveis de ambiente
 ```
+cd backend
 cp .env.example .env
 ```
   
 #### 2. Instalar dependências
 ```
-npm install
+npm run install
 ```
 
 #### 3. Rodar migrações
 ```
-npx prisma migrate dev
+npm run migrations
 ```
-  
 
 #### 4. Iniciar servidor de desenvolvimento
 ```
